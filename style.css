@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* display:flex; */
+
+main,
+.container,
+.wrapper,
+.textcontainer,
+.plancontainer,
+.plan {
+  display: flex;
+}
+
+/* justify-content:center; */
+
+main,
+.wrapper,
+.textcontainer {
+  justify-content: center;
+}
+
+/* Align-items: center; */
+
+main,
+.container,
+.wrapper,
+.textcontainer,
+.plancontainer,
+.plan {
+  align-items: center;
+}
+
+/* flex-direction: column; */
+
+main,
+.container,
+.wrapper,
+.textcontainer {
+  flex-direction: column;
+}
+body {
+  height: 100vh;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Red Hat Display", sans-serif;
+  color: hsl(223, 47%, 23%);
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  background: hsla(224, 23%, 55%, 0.3);
+}
+.container {
+  width: 450px;
+  height: 700px;
+  background: white;
+  border-radius: 2em;
+}
+.header,
+.header img {
+  width: 100%;
+}
+.header {
+  border-top-right-radius: 2em;
+  border-top-left-radius: 2em;
+}
+.textcontainer,
+.plan {
+  gap: 1em;
+}
+.wrapper {
+  gap: 2em;
+  padding: 10%;
+}
+.textcontainer {
+  text-align: center;
+  gap: 1em;
+}
+.plancontainer {
+  width: 100%;
+  justify-content: space-evenly;
+  background: hsla(225, 100%, 94%, 0.4);
+  border-radius: 1em;
+  padding: 1em 0;
+}
+.plan p,
+.paybtn,
+.cancel {
+  font-weight: 900;
+}
+.plan p {
+  line-height: 1.5em;
+}
+.plan p span {
+  display: block;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+.plancontainer a:hover,
+.plancontainer a:active {
+  font-weight: 700;
+  text-decoration: none;
+}
+.paybtn,
+.cancel {
+  cursor: pointer;
+}
+.paybtn {
+  width: 100%;
+  padding: 1em 0;
+  background: hsl(245, 75%, 52%);
+  color: white;
+  border-radius: 1em;
+  border: none;
+  box-shadow: 0 1em 2em hsl(225, 100%, 94%);
+  cursor: pointer;
+}
+.paybtn:hover,
+.paybtn:active {
+  background: hsla(245, 75%, 52%, 0.7);
+}
+.cancel {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.cancel:hover,
+.cancel:active {
+  color: hsla(223, 47%, 23%, 0.7);
+}
+@media only screen and (max-width: 500px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+  .container {
+    width: 90vw;
+  }
+  .wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
